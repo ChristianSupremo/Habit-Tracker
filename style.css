@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    flex-direction: column;
+}
+
+.container, #authContainer {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.container:hover, #authContainer:hover {
+    transform: scale(1.02);
+}
+
+.auth-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+
+.auth-dialog button {
+    background: #2575fc;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-dialog button:hover {
+    background: #6a11cb;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 8px rgba(37, 117, 252, 0.5);
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    background: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #6a11cb;
+}
+
+ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+
+li input[type="checkbox"] {
+    transform: scale(1.2);
+    width: auto; /* Fixes the checkbox taking too much space */
+    margin-right: 10px;
+}
+
+li span {
+    flex-grow: 1;
+    text-align: left; /* Changed to left alignment */
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px; /* Added margin */
+}
+
+li button {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+li button:hover {
+    background: #cc0000;
+}
+
+#habitList {
+    width: 100%;
+}
+
+li input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}

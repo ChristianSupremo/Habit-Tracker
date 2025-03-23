@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="authContainer">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Enter username">
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="login()">Login</button>
+    </div>
+    <div class="container" id="habitContainer" style="display: none;">
+        <h1>Daily Habit Tracker</h1>
+        <button onclick="logout()">Logout</button>
+        <input type="text" id="habitInput" placeholder="Enter a habit">
+        <button onclick="addHabit()">Add Habit</button>
+        <ul id="habitList"></ul>
+    </div>
+    <div id="authMessage" class="auth-dialog" style="display: none;">
+        <p id="authText"></p>
+        <button onclick="closeAuthMessage()">OK</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
